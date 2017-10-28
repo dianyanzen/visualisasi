@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html idmmzcc-ext-docid="879556608"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="description" content="jQuery-Mask-Plugin - A jQuery plugin to make field masks">
+  <meta name="author" content="Igor Escobar">
+  <title>jQuery Mask Plugin - A jQuery Plugin to make masks on form fields and html elements.</title>
+
+  <link rel="stylesheet" href="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/bootstrap.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/default.css">
+
+  <link href="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/css.css" rel="stylesheet" type="text/css">
+  <!-- <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'> -->
+  <!-- <link href='https://fonts.googleapis.com/css?family=Cabin+Condensed' rel='stylesheet' type='text/css'> -->
+  <style type="text/css">
+    * {font-family: 'Lato', sans-serif;}
+    .container {width:773px;}
+    h1 {margin-bottom:10px}
+    h1 .jq-label {font-size: 35px; color: #CFCFCF; display:block;margin:21px 2px 40px 13px;}
+    h1 .plugin-name {font-size:140px; color: #6BBEC7;}
+    span.subtitle {margin-bottom:20px;}
+    div#examples div.col {width:246px;float:left;}
+
+    div#examples div.col.center {text-align:center;}
+    div#examples div.col.center.banner {border: 1px solid #ccc; padding:15px; margin-top:24px;}
+
+    pre {overflow-x: auto; white-space:pre; word-wrap:normal; font-size:12px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+  <h1><span class="jq-label">jQuery</span> <span class="plugin-name">Mask Plugin</span></h1>
+  <span class="subtitle">A jQuery Plugin to make masks on form fields and html elements.</span> <br> <br>
+
+  <!-- Place this tag where you want the button to render. -->
+  <iframe allowtransparency="true" scrolling="no" style="width: 110px; height: 28px; border: medium none;" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/buttons.htm" frameborder="0"></iframe>
+
+  <h2>Demonstrations</h2>
+  <div id="examples">
+    <div class="col">
+      <label>Date</label>
+      <input class="date" value="12/33/4444" type="text">
+      <label>Hour</label>
+      <input class="time" type="text">
+      <label>Date &amp; Hour</label>
+      <input class="date_time" type="text">
+      <label>Zip-Code</label>
+      <input class="cep" type="text">
+      <label>With Callbacks (open console)</label>
+      <input class="cep_with_callback" type="text">
+      <label>Crazy Zip-Code</label>
+      <input class="crazy_cep" type="text">
+      <label>Money</label>
+      <input class="money" type="text">
+      <label>Mask placeholder option</label>
+      <input class="placeholder" placeholder="__/__/____" type="text">
+      <label>Masks on div elements!</label>
+      <div class="mask-on-div">12345678909</div> <input class="bt-mask-it" value="Mask it!" type="button">
+    </div>
+    <div class="col">
+      <label>Telephone</label>
+      <input class="phone" type="text">
+      <label>Telephone with Code Area</label>
+      <input class="phone_with_ddd" type="text">
+      <label>US Telephone</label>
+      <input class="phone_us" type="text">
+      <label>São Paulo Celphones</label>
+      <input class="sp_celphones" type="text">
+      <label>Mixed Type Mask</label>
+      <input class="mixed" type="text">
+      <label>CPF</label>
+      <input class="cpf" type="text">
+      <label>CNPJ</label>
+      <input class="cnpj" type="text">
+      <label>IP Address</label>
+      <input class="ip_address" type="text">
+      <label>Mask with Clear If Not Match Option</label>
+      <input class="clear-if-not-match" type="text">
+      <label>Mask with a Fallback Digit</label>
+      <input class="fallback" type="text">
+      <label>Mask with selectOnFocus</label>
+      <input class="selectonfocus" type="text">
+    </div>
+    <div class="col center banner">
+      <p>The <a href="https://igorescobar.github.com/jQuery-Mask-Plugin/">jQuery Mask Plugin</a> was written by <a href="http://www.igorescobar.com/" rel="author" target="_blank">Igor Escobar</a> and the source-code's available in <a href="https://github.com/igorescobar/jQuery-Mask-Plugin" target="_blank">GitHub</a>.</p>
+      <h3>Buy me a beer :o)</h3> <br>
+	      <h4>Donate via Pladgie</h4>
+        <a href="https://pledgie.com/campaigns/22649"><img alt="Click here to lend your support to: jQuery Mask Plugin and make a donation at pledgie.com !" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/22649.png" border="0"></a> <br> <br>
+  	    <h4>Donate via Flattr</h4>
+        <iframe src="//api.flattr.com/button/view/?uid=igorescobar&amp;url=https%3A%2F%2Figorescobar.github.io%2FjQuery-Mask-Plugin%2F" title="Flattr" style="border-width: 0px;" width="55" height="62"></iframe><script id="fb3cw6z">(function(i){var f,s=document.getElementById(i);f=document.createElement('iframe');f.src='//api.flattr.com/button/view/?uid=igorescobar&url='+encodeURIComponent(document.URL);f.title='Flattr';f.height=62;f.width=55;f.style.borderWidth=0;s.parentNode.insertBefore(f,s);})('fb3cw6z');</script>
+    </div>
+  </div>
+  <br clear="all"><br clear="all"><br clear="all">
+  <div id="code-samples">
+    <h1>Documentation</h1>
+    <h2>Basic Usage Examples</h2>
+<pre class="ruby"><span class="variable">$(</span>document).ready(function(){
+  <span class="variable">$(</span><span class="string">'.date'</span>).mask(<span class="string">'00/00/0000'</span>);
+  <span class="variable">$(</span><span class="string">'.time'</span>).mask(<span class="string">'00:00:00'</span>);
+  <span class="variable">$(</span><span class="string">'.date_time'</span>).mask(<span class="string">'00/00/0000 00:00:00'</span>);
+  <span class="variable">$(</span><span class="string">'.cep'</span>).mask(<span class="string">'00000-000'</span>);
+  <span class="variable">$(</span><span class="string">'.phone'</span>).mask(<span class="string">'0000-0000'</span>);
+  <span class="variable">$(</span><span class="string">'.phone_with_ddd'</span>).mask(<span class="string">'(00) 0000-0000'</span>);
+  <span class="variable">$(</span><span class="string">'.phone_us'</span>).mask(<span class="string">'(000) 000-0000'</span>);
+  <span class="variable">$(</span><span class="string">'.mixed'</span>).mask(<span class="string">'AAA 000-S0S'</span>);
+  <span class="variable">$(</span><span class="string">'.cpf'</span>).mask(<span class="string">'000.000.000-00'</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.cnpj'</span>).mask(<span class="string">'00.000.000/0000-00'</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.money'</span>).mask(<span class="string">'000.000.000.000.000,00'</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.money2'</span>).mask(<span class="string">"#.##0,00"</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.ip_address'</span>).mask(<span class="string">'0ZZ.0ZZ.0ZZ.0ZZ'</span>, {
+    <span class="symbol">translation:</span> {
+      <span class="string">'Z'</span><span class="symbol">:</span> {
+        <span class="symbol">pattern:</span> /[<span class="number">0</span>-<span class="number">9</span>]/, <span class="symbol">optional:</span> <span class="keyword">true</span>
+      }
+    }
+  });
+  <span class="variable">$(</span><span class="string">'.ip_address'</span>).mask(<span class="string">'099.099.099.099'</span>);
+  <span class="variable">$(</span><span class="string">'.percent'</span>).mask(<span class="string">'##0,00%'</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.clear-if-not-match'</span>).mask(<span class="string">"00/00/0000"</span>, {<span class="symbol">clearIfNotMatch:</span> <span class="keyword">true</span>});
+  <span class="variable">$(</span><span class="string">'.placeholder'</span>).mask(<span class="string">"00/00/0000"</span>, {<span class="symbol">placeholder:</span> <span class="string">"__/__/____"</span>});
+  <span class="variable">$(</span><span class="string">'.fallback'</span>).mask(<span class="string">"00r00r0000"</span>, {
+      <span class="symbol">translation:</span> {
+        <span class="string">'r'</span><span class="symbol">:</span> {
+          <span class="symbol">pattern:</span> /[\/]/,
+          <span class="symbol">fallback:</span> <span class="string">'/'</span>
+        },
+        <span class="symbol">placeholder:</span> <span class="string">"__/__/____"</span>
+      }
+    });
+  <span class="variable">$(</span><span class="string">'.selectonfocus'</span>).mask(<span class="string">"00/00/0000"</span>, {<span class="symbol">selectOnFocus:</span> <span class="keyword">true</span>});
+});</pre>
+
+    <h3>Callback Examples</h3>
+<pre class="javascript"><span class="keyword">var</span> options =  {
+  onComplete: <span class="keyword">function</span>(cep) {
+    alert(<span class="string">'CEP Completed!:'</span> + cep);
+  },
+  onKeyPress: <span class="keyword">function</span>(cep, event, currentField, options){
+    console.log(<span class="string">'An key was pressed!:'</span>, cep, <span class="string">' event: '</span>, event,
+                <span class="string">'currentField: '</span>, currentField, <span class="string">' options: '</span>, options);
+  },
+  onChange: <span class="keyword">function</span>(cep){
+    console.log(<span class="string">'cep changed! '</span>, cep);
+  },
+  onInvalid: <span class="keyword">function</span>(val, e, f, invalid, options){
+    <span class="keyword">var</span> error = invalid[<span class="number">0</span>];
+    console.log (<span class="string">"Digit: "</span>, error.v, <span class="string">" is invalid for the position: "</span>, error.p, <span class="string">". We expect something like: "</span>, error.e);
+  }
+};
+
+$(<span class="string">'.cep_with_callback'</span>).mask(<span class="string">'00000-000'</span>, options);
+</pre>
+    <h3>On-the-fly mask change</h3>
+<pre class="javascript"><span class="keyword">var</span> options =  {onKeyPress: <span class="keyword">function</span>(cep, e, field, options){
+  <span class="keyword">var</span> masks = [<span class="string">'00000-000'</span>, <span class="string">'0-00-00-00'</span>];
+    mask = (cep.length&gt;<span class="number">7</span>) ? masks[<span class="number">1</span>] : masks[<span class="number">0</span>];
+  $(<span class="string">'.crazy_cep'</span>).mask(mask, options);
+}};
+
+$(<span class="string">'.crazy_cep'</span>).mask(<span class="string">'00000-000'</span>, options);
+</pre>
+
+    <h3>Mask as a function</h3>
+<pre class="javascript"><span class="keyword">var</span> SPMaskBehavior = <span class="function"><span class="keyword">function</span> <span class="params">(val)</span> {</span>
+  <span class="keyword">return</span> val.replace(<span class="regexp">/\D/g</span>, <span class="string">''</span>).length === <span class="number">11</span> ? <span class="string">'(00) 00000-0000'</span> : <span class="string">'(00) 0000-00009'</span>;
+},
+spOptions = {
+  onKeyPress: <span class="keyword">function</span>(val, e, field, options) {
+      field.mask(SPMaskBehavior.apply({}, arguments), options);
+    }
+};
+
+$(<span class="string">'.sp_celphones'</span>).mask(SPMaskBehavior, spOptions);
+</pre>
+
+    <h3>Using HTML Notation Exemples</h3>
+
+    To get your mask applied with the data-mask attribute just use it as the same way you use with the $.mask function. <br> <br>
+<pre class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"field-name"</span> <span class="attribute">data-mask</span>=<span class="value">"00/00/0000"</span> /&gt;</span>
+</pre>
+  Activating a reversible mask <br> <br>
+<pre class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"field-name"</span> <span class="attribute">data-mask</span>=<span class="value">"00/00/0000"</span> <span class="attribute">data-mask-reverse</span>=<span class="value">"true"</span> /&gt;</span>
+</pre>
+
+  Using clearIfNotMatch option <br> <br>
+<pre class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"field-name"</span> <span class="attribute">data-mask</span>=<span class="value">"00/00/0000"</span> <span class="attribute">data-mask-clearifnotmatch</span>=<span class="value">"true"</span> /&gt;</span>
+</pre>
+
+ Using selectOnFocus option <br> <br>
+<pre class="xml"><span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"field-name"</span> <span class="attribute">data-mask</span>=<span class="value">"00/00/0000"</span> <span class="attribute">data-mask-selectonfocus</span>=<span class="value">"true"</span> /&gt;</span>
+</pre>
+
+<br>
+<h3>Translation</h3>
+Teach to jQuery Mask Plugin how to apply your mask: <br><br>
+
+<pre class="javascript"><span class="comment">// now the digit 0 on your mask pattern will be interpreted</span>
+<span class="comment">// as valid characters like 0,1,2,3,4,5,6,7,8,9 and *</span>
+$(<span class="string">'.your-field'</span>).mask(<span class="string">'00/00/0000'</span>, {<span class="string">'translation'</span>: {<span class="number">0</span>: {pattern: <span class="regexp">/[0-9*]/</span>}}});
+</pre>
+
+    By default, jQuery Mask Plugin only reconizes the logical digit A (Numbers and Letters) and S (A-Za-z) but
+    you can extend or modify this behaviour by telling to jQuery Mask Plugin how to interpret those logical digits. <br><br>
+
+<pre class="javascript">$(<span class="string">'.your-field'</span>).mask(<span class="string">'AA/SS/YYYY'</span>, {<span class="string">'translation'</span>: {
+                                        A: {pattern: <span class="regexp">/[A-Za-z0-9]/</span>},
+                                        S: {pattern: <span class="regexp">/[A-Za-z]/</span>},
+                                        Y: {pattern: <span class="regexp">/[0-9]/</span>}
+                                      }
+                                });
+</pre>
+    Now jQuery Mask Plugin knows the logic digit Y and you can create your own pattern. <br><br>
+
+    <h4>Optional digits</h4>  <br>
+
+    You can also tell to jQuery Mask which digit is optional, to create a IP mask for example: <br><br>
+
+<pre class="javascript"><span class="comment">// way 1</span>
+$(<span class="string">'.ip_address'</span>).mask(<span class="string">'099.099.099.099'</span>);
+<span class="comment">// way 2</span>
+$(<span class="string">'.ip_address'</span>).mask(<span class="string">'0ZZ.0ZZ.0ZZ.0ZZ'</span>, {translation:  {<span class="string">'Z'</span>: {pattern: <span class="regexp">/[0-9]/</span>, optional: <span class="literal">true</span>}}});
+</pre>
+
+    Now, all <strong>Z</strong> digits in your masks is optional. <br> <br>
+
+    <h4>Recursive digits</h4> <br>
+
+    With jQuery Mask Plugin you can also define recursive patterns inside your mask: <br><br>
+    <pre class="ruby"><span class="variable">$(</span><span class="string">'.money_example'</span>).mask(<span class="string">'#.##0,00'</span>, {<span class="symbol">reverse:</span> <span class="keyword">true</span>});</pre>
+    With example above the mask will be placed from the right to the 
+left (that's why reverse:true is defined). As soon as you start typing, a
+ "0,00" will be applied followed by repeating recursively the following 
+pattern "#.##". The result could be something like: 1.234.567,890. <br><br>
+
+    You can also use that kind of feature to define what kind of data could be typed inside of a field:
+    <pre class="ruby"><span class="variable">$(</span><span class="string">'.example'</span>).mask(<span class="string">'0#'</span>);</pre>
+    Now only numbers will be allowed inside your form field. <br> <br>
+
+    <h4>Fallback digits</h4>
+
+    When a user types a invalid char for the current position the plugin
+ will replace it by its fallback instead of erasing them.
+
+<pre class="javascript">$(<span class="string">'.field_with_fallback'</span>).mask(<span class="string">"00r00r0000"</span>, {
+  translation: {
+    <span class="string">'r'</span>: {
+      pattern: <span class="regexp">/[\/]/</span>,
+      fallback: <span class="string">'/'</span>
+    },
+    placeholder: <span class="string">"__/__/____"</span>
+  }
+});
+</pre>
+
+    <br><h3>Removing the mask</h3>
+    <pre class="ruby"><span class="variable">$(</span><span class="string">'.date'</span>).unmask();</pre>
+
+    <br><h3>Getting the unmasked typed value</h3>
+    <pre class="ruby"><span class="variable">$(</span><span class="string">'.date'</span>).cleanVal();</pre>
+
+    <br><h3>Getting a masked value programmatically</h3>
+    <pre class="ruby"><span class="variable">$(</span><span class="string">'.date'</span>).masked(<span class="string">'19840807'</span>);</pre>
+
+<br>
+<h2>Customization</h2>
+
+jQuery Mask Plugin has a few default options that you can overwrite as you like:
+<h3>Field Options</h3>
+<pre class="javascript"><span class="keyword">var</span> custom_options = {
+  byPassKeys: [<span class="number">8</span>, <span class="number">9</span>, <span class="number">37</span>, <span class="number">38</span>, <span class="number">39</span>, <span class="number">40</span>],
+  translation: {
+                <span class="string">'0'</span>: {pattern: <span class="regexp">/\d/</span>},
+                <span class="string">'9'</span>: {pattern: <span class="regexp">/\d/</span>, optional: <span class="literal">true</span>},
+                <span class="string">'#'</span>: {pattern: <span class="regexp">/\d/</span>, recursive: <span class="literal">true</span>},
+                <span class="string">'A'</span>: {pattern: <span class="regexp">/[a-zA-Z0-9]/</span>},
+                <span class="string">'S'</span>: {pattern: <span class="regexp">/[a-zA-Z]/</span>}
+            };
+};</pre>
+<strong> byPassKeys </strong> list of keyboard's <a href="http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes" target="_blank">keyCode</a> that you want to be ignored when it was pressed. <br>
+<strong> translation </strong> object with all digits that should be interpreted as a special chars and its regex representation. <br> <br>
+
+<h3>Public Methods</h3>
+<pre class="java"><span class="javadoc">/**
+ * Applies the mask to the matching selector elements.
+ *
+ * <span class="javadoctag">@selector</span> elements to be masked.
+ * <span class="javadoctag">@mask</span> should be a string or a function.
+ * <span class="javadoctag">@options</span> should be an object.
+ **/</span>
+$(selector).mask(mask [, options]);
+
+<span class="javadoc">/**
+ * Seek and destroy.
+ *
+ * <span class="javadoctag">@selector</span> elements to be masked.
+ **/</span>
+$(selector).unmask();
+
+<span class="javadoc">/**
+ * Gets the value of the field without the mask.
+ *
+ * <span class="javadoctag">@selector</span> elements to be masked.
+ **/</span>
+$(selector).cleanVal();
+
+<span class="javadoc">/**
+ * Applies the mask to the matching selector elements.
+ *
+ * <span class="javadoctag">@selector</span> optional: elements to be masked. The default behaviour it's to lookup for all elements with data-mask attribute.
+ **/</span>
+$.applyDataMask([selector]);
+</pre>
+<h3>Global Options</h3>
+<pre class="javascript"><span class="comment">// nonInput: elements we consider nonInput</span>
+<span class="comment">// dataMask: we mask data-mask elements by default</span>
+<span class="comment">// watchInputs: watch for dynamically added inputs by default</span>
+<span class="comment">// watchDataMask: by default we disabled the watcher for dynamically added data-mask elements by default (performance reasons)</span>
+ $.jMaskGlobals = {
+    maskElements: <span class="string">'input,td,span,div'</span>,
+    dataMaskAttr: <span class="string">'*[data-mask]'</span>,
+    dataMask: <span class="literal">true</span>,
+    watchInterval: <span class="number">300</span>,
+    watchInputs: <span class="literal">true</span>,
+    watchDataMask: <span class="literal">false</span>,
+    byPassKeys: [<span class="number">9</span>, <span class="number">16</span>, <span class="number">17</span>, <span class="number">18</span>, <span class="number">36</span>, <span class="number">37</span>, <span class="number">38</span>, <span class="number">39</span>, <span class="number">40</span>, <span class="number">91</span>],
+    translation: {
+        <span class="string">'0'</span>: {pattern: <span class="regexp">/\d/</span>},
+        <span class="string">'9'</span>: {pattern: <span class="regexp">/\d/</span>, optional: <span class="literal">true</span>},
+        <span class="string">'#'</span>: {pattern: <span class="regexp">/\d/</span>, recursive: <span class="literal">true</span>},
+        <span class="string">'A'</span>: {pattern: <span class="regexp">/[a-zA-Z0-9]/</span>},
+        <span class="string">'S'</span>: {pattern: <span class="regexp">/[a-zA-Z]/</span>}
+    }
+  };
+</pre>
+  </div>
+
+<br clear="all">
+
+</div>
+
+<script src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/highlight.js"></script>
+<script type="text/javascript" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/jquery-latest.js"></script>
+<script async="" defer="defer" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/buttons.js"></script>
+<script type="text/javascript" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/bootstrap.js"></script>
+<script type="text/javascript" src="jQuery%20Mask%20Plugin%20-%20A%20jQuery%20Plugin%20to%20make%20masks%20on%20form%20fields%20and%20html%20elements_files/jquery.js"></script>
+
+<script type="text/javascript">
+  $(function() {
+    $('.date').mask('00/00/0000');
+    $('.time').mask('00:00:00');
+    $('.date_time').mask('00/00/0000 00:00:00');
+    $('.cep').mask('00000-000');
+    $('.phone').mask('0000-0000');
+    $('.phone_with_ddd').mask('(00) 0000-0000');
+    $('.phone_us').mask('(000) 000-0000');
+    $('.mixed').mask('AAA 000-S0S');
+    $('.ip_address').mask('099.099.099.099');
+    $('.percent').mask('##0,00%', {reverse: true});
+    $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+    $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+    $('.fallback').mask("00r00r0000", {
+      translation: {
+        'r': {
+          pattern: /[\/]/,
+          fallback: '/'
+        },
+        placeholder: "__/__/____"
+      }
+    });
+
+    $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+
+    $('.cep_with_callback').mask('00000-000', {onComplete: function(cep) {
+        console.log('Mask is done!:', cep);
+      },
+       onKeyPress: function(cep, event, currentField, options){
+        console.log('An key was pressed!:', cep, ' event: ', event, 'currentField: ', currentField.attr('class'), ' options: ', options);
+      },
+      onInvalid: function(val, e, field, invalid, options){
+        var error = invalid[0];
+        console.log ("Digit: ", error.v, " is invalid for the position: ", error.p, ". We expect something like: ", error.e);
+      }
+    });
+
+    $('.crazy_cep').mask('00000-000', {onKeyPress: function(cep, e, field, options){
+      var masks = ['00000-000', '0-00-00-00'];
+        mask = (cep.length>7) ? masks[1] : masks[0];
+      $('.crazy_cep').mask(mask, options);
+    }});
+
+    $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+    $('.cpf').mask('000.000.000-00', {reverse: true});
+    $('.money').mask('#.##0,00', {reverse: true});
+
+    var SPMaskBehavior = function (val) {
+      return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+    },
+    spOptions = {
+      onKeyPress: function(val, e, field, options) {
+          field.mask(SPMaskBehavior.apply({}, arguments), options);
+        }
+    };
+
+    $('.sp_celphones').mask(SPMaskBehavior, spOptions);
+
+    $(".bt-mask-it").click(function(){
+      $(".mask-on-div").mask("000.000.000-00");
+      $(".mask-on-div").fadeOut(500).fadeIn(500)
+    })
+
+    $('pre').each(function(i, e) {hljs.highlightBlock(e)});
+  });
+</script>
+
+
+</body></html>

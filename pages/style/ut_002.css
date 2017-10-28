@@ -1,0 +1,46 @@
+/*
+   Twitter Widget Copyright 2013 UNITED THEMES
+   www.unitedthemes.com
+*/
+
+.ut-tweets {
+}
+.tweet_list li {
+	padding-bottom:5px;
+	margin-bottom:5px;
+	border-bottom:1px solid #EFEFEF;
+}
+.tweet_list li:last-child {
+	border:none;
+	padding-bottom:0;
+	margin-bottom:0;
+}
+.tweet-left {
+	float:left;
+	display: inline;
+	margin-right: 10px;
+}
+.tweet-left img {
+	float:left;
+}
+.tweet-actions {
+	float: left;
+}
+.tweet-actions a {
+}
+.tweet-actions a:hover {
+}
+.tweet-right {
+}
+.tweet_time {
+}
+.tweet_time a {
+}
+.tweet_time a:hover {
+}
+.tweet_text {
+	display: block;
+}
+.tweet-bottom {
+	display: block;
+}
